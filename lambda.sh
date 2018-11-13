@@ -2,7 +2,7 @@
 echo "Inside lambda.sh file"
 pwd
 ls -al
-set -e MyLambda=$(aws lambda list-functions --region us-east-1 --query 'Functions[0].FunctionName' --output text)
+MyLambda=$(aws lambda list-functions --region us-east-1 --query 'Functions[0].FunctionName' --output text)
 
 echo $MyLambda
 
