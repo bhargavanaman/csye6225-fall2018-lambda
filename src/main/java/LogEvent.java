@@ -50,7 +50,6 @@ public class LogEvent implements RequestHandler<SNSEvent, Object> {
             if(item==null) {
                 Item itemPut = new Item()
                         .withPrimaryKey("id", request.getRecords().get(0).getSNS().getMessage())//string
-                        //.withPrimaryKey("id", request.getRecords().get(0).getSNS().getMessageId())
                         .withString("token", context.getAwsRequestId())
                         .withNumber("passwordTokenExpiry", unixTime);
 
@@ -89,6 +88,8 @@ public class LogEvent implements RequestHandler<SNSEvent, Object> {
                     context.getLogger().log ("The email was not sent. Error message: "
                             + ex.getMessage());
                 }
+            }else{
+                context.getLogger().log("Item with id "+request.getRecords().get(0).getSNS().getMessage()+" already exist");
             }
         }
         catch(AmazonServiceException ase){
