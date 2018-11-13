@@ -3,7 +3,8 @@ jdk:
   - oraclejdk8
 env:
     global:
-    - AWS_ACCESS_KEY_ID=$$ACCESS_KEY_ID
+    - AWS_ACCESS_KEY_ID=$ACCESS_KEY_ID
+    - AWS_SECRET_ACCESS_KEY=$SECRET_ACCESS_KEY
     - AWS_DEFAULT_REGION=us-east-1
 
 sudo: false
@@ -16,6 +17,10 @@ script:
   - cd ../..
   - pwd
   - ls -al
+
+before_install:
+  - pip install --user awscli
+  - export PATH=$PATH:$HOME/.local/bin
 
 
 after_success:
