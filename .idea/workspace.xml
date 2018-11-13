@@ -105,14 +105,14 @@
         <counts>
           <entry key="java" value="51" />
           <entry key="sh" value="18" />
-          <entry key="yml" value="145" />
+          <entry key="yml" value="147" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="51" />
           <entry key="PLAIN_TEXT" value="18" />
-          <entry key="YAML" value="145" />
+          <entry key="YAML" value="147" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -164,8 +164,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+            <state relative-caret-position="44">
+              <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -677,12 +677,12 @@
       <workItem from="1541664302744" duration="615000" />
       <workItem from="1541895283602" duration="529000" />
       <workItem from="1542143285548" duration="873000" />
-      <workItem from="1542145406488" duration="4071000" />
+      <workItem from="1542145406488" duration="4862000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19395000" />
+    <option name="totallyTimeSpent" value="20186000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="973" extended-state="6" />
@@ -759,8 +759,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+        <state relative-caret-position="44">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
         </state>
       </provider>
     </entry>
