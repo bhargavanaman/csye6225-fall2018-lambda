@@ -47,7 +47,6 @@ deploy:
     runtime: java8
     zip: lambda_artifact/lambda-dpk-nmn.zip
     memory_size: 180
-    module_name: "myLambdaFunction"
     handler_name: "$HANDLER"
     access_key_id: $ACCESS_KEY_ID
     timeout: 300
