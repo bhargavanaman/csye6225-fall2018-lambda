@@ -45,7 +45,7 @@ public class LogEvent implements RequestHandler<SNSEvent, Object> {
             context.getLogger().log("Above Item");
             //context.getLogger().log("Table Description: "+table.getDescription().getTableName());
             Item item = table.getItem("id", request.getRecords().get(0).getSNS().getMessage());
-            context.getLogger().log("Below Item");
+            //context.getLogger().log("Below Item");
 
             if(item==null) {
                 Item itemPut = new Item()
