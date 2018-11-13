@@ -5,7 +5,7 @@
 SRC_LAMBDA_FUNCTION_NAME="$1"
 DST_LAMBDA_FUNCTION_NAME="$1"
 
-SRC_PACKAGE_URL=$(aws lambda get-function --function-name "$SRC_LAMBDA_FUNCTION_NAME" --query 'Code.Location' --output text)
+SRC_PACKAGE_URL=$(aws lambda get-function --function-name "$SRC_LAMBDA_FUNCTION_NAME"  --region us-east-1 --query 'Code.Location' --output text)
 
 if [ $? -ne 0 ]; then
     exit 1
