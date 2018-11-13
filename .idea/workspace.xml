@@ -106,13 +106,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="75" />
-          <entry key="sh" value="108" />
+          <entry key="sh" value="114" />
           <entry key="yml" value="222" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Bash" value="36" />
+          <entry key="Bash" value="42" />
           <entry key="JAVA" value="75" />
           <entry key="PLAIN_TEXT" value="72" />
           <entry key="YAML" value="222" />
@@ -682,12 +682,12 @@
       <workItem from="1541895283602" duration="529000" />
       <workItem from="1542143285548" duration="873000" />
       <workItem from="1542145406488" duration="6174000" />
-      <workItem from="1542151676122" duration="1477000" />
+      <workItem from="1542151676122" duration="1760000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22975000" />
+    <option name="totallyTimeSpent" value="23258000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="973" extended-state="6" />
