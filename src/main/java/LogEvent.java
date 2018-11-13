@@ -89,6 +89,7 @@ public class LogEvent implements RequestHandler<SNSEvent, Object> {
                             + ex.getMessage());
                 }
             }else{
+                context.getLogger().log("-----------------------Item with id "+request.getRecords().get(0).getSNS().getMessage()+" already exist-----------------------");
                 context.getLogger().log("Item with id "+request.getRecords().get(0).getSNS().getMessage()+" already exist");
             }
         }
