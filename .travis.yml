@@ -38,7 +38,7 @@ after_success:
 deploy:
   - provider: script
     skip_cleanup: true
-    script: bash csye6225-fall2018-update-lambda.sh
+    script: bash csye6225-fall2018-update-lambda.sh csye6225-fall2018-lambda
     access_key_id: $ACCESS_KEY_ID
     secret_access_key: $SECRET_ACCESS_KEY
     on:
