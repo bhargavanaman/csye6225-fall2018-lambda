@@ -13,11 +13,6 @@ script:
   - pwd
   - ls -al
 
-before_install:
-  - pip install --user awscli
-  - export PATH=$PATH:$HOME/.local/bin
-
-
 
 after_success:
   - pwd
@@ -48,13 +43,13 @@ deploy:
       all_branches: true
     
   - provider: lambda
-    function_name: "$FUNCTION_NAME"
-    region: "us-east-1"
+    function_name: $FUNCTION_NAME
+    region: us-east-1
     role: $ROLE
     runtime: java8
-    zip: lambda_artifact/lambda-dpk-nmn.zip
+    zip: lambda-dpk-nmn.zip
     memory_size: 180
-    handler_name: "$HANDLER"
+    handler_name: $HANDLER
     access_key_id: $ACCESS_KEY_ID
     timeout: 600
     secret_access_key: $SECRET_ACCESS_KEY
