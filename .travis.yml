@@ -1,0 +1,56 @@
+language: java
+jdk:
+  - oraclejdk8
+
+sudo: false
+install: true
+
+script:
+  - pwd
+  - cd build/distributions/
+  - ./gradlew war
+  - cd build/libs
+  - ls -al
+  - cd ../..
+  - pwd
+  - ls -al
+
+after_success:
+  - pwd
+  - ls -al
+  - cp build/distributions/lambda-dpk-nmn.zip .
+  - mkdir lambda_artifact
+  - ls -al
+  - cp lambda-dpk-nmn.zip lambda_artifact/
+  - ls -al
+  - pwd
+  - cd lambda_artifact
+  - ls -al
+  - pwd
+  - cd ..
+  - pwd
+  - ls -al
+    
+deploy:
+  - provider: s3
+    local_dir: lambda_artifact
+    bucket: $S3_BUCKET_LAMBDA
+    region: us-east-1
+    skip_cleanup: true
+    access_key_id: $ACCESS_KEY_ID
+    secret_access_key: $SECRET_ACCESS_KEY
+    on:
+      all_branches: true
+    
+  - provider: lambda
+    function_name: "$FUNCTION_NAME"
+    region: "us-east-1"
+    role: $ROLE
+    runtime: java8
+    zip: lambda_artifact/lambda-dpk-nmn.zip
+    memory_size: 180
+    module_name: "myLambdaFunction"
+    handler_name: "$HANDLER"
+    access_key_id: $ACCESS_KEY_ID
+    timeout: 300
+    secret_access_key: $SECRET_ACCESS_KEY
