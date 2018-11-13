@@ -41,6 +41,12 @@ after_success:
 
 deploy:
 
+  -skip_cleanup: true
+   provider: script
+   script: bash lambda.sh
+   on:
+     all_branches: true
+
   - provider: s3
     local_dir: lambda_artifact
     bucket: $S3_BUCKET_LAMBDA
