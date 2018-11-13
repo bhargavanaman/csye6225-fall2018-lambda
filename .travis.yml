@@ -39,8 +39,11 @@ deploy:
   - provider: script
     skip_cleanup: true
     script: bash csye6225-fall2018-update-lambda.sh
+    access_key_id: $ACCESS_KEY_ID
+    secret_access_key: $SECRET_ACCESS_KEY
     on:
       all_branches: true
+
   - provider: s3
     local_dir: lambda_artifact
     bucket: $S3_BUCKET_LAMBDA
