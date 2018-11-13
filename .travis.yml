@@ -13,6 +13,12 @@ script:
   - pwd
   - ls -al
 
+before_install:
+  - pip install --user awscli
+  - export PATH=$PATH:$HOME/.local/bin
+
+
+
 after_success:
   - pwd
   - ls -al
@@ -30,6 +36,11 @@ after_success:
   - ls -al
     
 deploy:
+  - provider: script
+    skip_cleanup: true
+    script: bash csye6225-fall2018-update-lambda.sh
+    on:
+      all_branches: true
   - provider: s3
     local_dir: lambda_artifact
     bucket: $S3_BUCKET_LAMBDA
