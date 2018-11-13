@@ -34,11 +34,7 @@ after_success:
   - cd ..
   - pwd
   - ls -al
-  - set -e MyLambda=$(aws lambda list-functions --region us-east-1 --query 'Functions[0].FunctionName' --output text)
-  - echo "$MyLambda”
-  - echo "updating function”
-  - aws lambda update-function-code --zip-file=fileb://lambda_deployment/lambda-aws-ROOT.zip --region=us-east-1 --function-name="$MyLambda”
-    
+
 deploy:
 
   - provider: s3
@@ -60,5 +56,5 @@ deploy:
     memory_size: 180
     handler_name: "$HANDLER"
     access_key_id: $ACCESS_KEY_ID
-    timeout: 300
+    timeout: 600
     secret_access_key: $SECRET_ACCESS_KEY
