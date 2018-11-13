@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+pwd
+ls -al
 
 set -e lambdaName=$(aws lambda list-functions --region us-east-1 --query 'Functions[0].FunctionName' --output text)
 
