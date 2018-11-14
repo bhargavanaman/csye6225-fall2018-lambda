@@ -105,7 +105,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="88" />
+          <entry key="java" value="91" />
           <entry key="sh" value="117" />
           <entry key="yml" value="222" />
         </counts>
@@ -113,7 +113,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="45" />
-          <entry key="JAVA" value="88" />
+          <entry key="JAVA" value="91" />
           <entry key="PLAIN_TEXT" value="72" />
           <entry key="YAML" value="222" />
         </counts>
@@ -155,8 +155,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/LogEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+            <state relative-caret-position="66">
+              <caret line="51" column="107" selection-start-line="51" selection-start-column="107" selection-end-line="51" selection-end-column="107" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -682,12 +682,12 @@
       <workItem from="1541895283602" duration="529000" />
       <workItem from="1542143285548" duration="873000" />
       <workItem from="1542145406488" duration="6174000" />
-      <workItem from="1542151676122" duration="2491000" />
+      <workItem from="1542151676122" duration="2999000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23989000" />
+    <option name="totallyTimeSpent" value="24497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="973" extended-state="6" />
@@ -761,8 +761,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/LogEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+        <state relative-caret-position="66">
+          <caret line="51" column="107" selection-start-line="51" selection-start-column="107" selection-end-line="51" selection-end-column="107" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

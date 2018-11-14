@@ -49,7 +49,7 @@ public class LogEvent implements RequestHandler<SNSEvent, Object> {
 
             if(item==null) {
                 Item itemPut = new Item()
-                        .withPrimaryKey("id", request.getRecords().get(0).getSNS().getMessage())//string
+                        .withPrimaryKey("id", request.getRecords().get(0).getSNS().getMessage())//string id
                         .withString("token", context.getAwsRequestId())
                         .withNumber("passwordTokenExpiry", unixTime);
 
