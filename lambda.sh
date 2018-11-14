@@ -11,5 +11,5 @@ DOMAIN_NAME="${DOMAIN_NAME%?}"
 echo "DOMAIN_NAME:- $DOMAIN_NAME"
 
 LAMBDABUCKET="lambda.$DOMAIN_NAME"
-aws lambda update-function-code --region=us-east-1 --function-name=$MyLambda --s3-bucket $LAMBDABUCKET --s3-key "lambda-dpk-nmn.zip"
+aws lambda update-function-code --region=us-east-1 --function-name=$MyLambda --s3-bucket=$LAMBDABUCKET --s3-key="lambda-dpk-nmn.zip"
 #aws lambda update-function-code --zip-file=fileb://lambda_artifact/lambda-dpk-nmn.zip --region=us-east-1 --function-name=$MyLambda
