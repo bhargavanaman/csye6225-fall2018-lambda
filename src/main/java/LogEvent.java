@@ -19,7 +19,7 @@ import java.util.Calendar;
 public class LogEvent implements RequestHandler<SNSEvent, Object> {
 
     static DynamoDB dynamoDB;
-    String domain = "csye6225-fall2018-bhargavan.me";
+    String domain = "csye6225-fall2018-chandwanid.me";
 
     public Object handleRequest(SNSEvent request, Context context) {
 
@@ -49,8 +49,7 @@ public class LogEvent implements RequestHandler<SNSEvent, Object> {
 
             if(item==null) {
                 Item itemPut = new Item()
-                        .withPrimaryKey("id", request.getRecords().get(0).getSNS().getMessage())//string
-                        //.withPrimaryKey("id", request.getRecords().get(0).getSNS().getMessageId())
+                        .withPrimaryKey("id", request.getRecords().get(0).getSNS().getMessage())//string id
                         .withString("token", context.getAwsRequestId())
                         .withNumber("passwordTokenExpiry", unixTime);
 
@@ -89,6 +88,9 @@ public class LogEvent implements RequestHandler<SNSEvent, Object> {
                     context.getLogger().log ("The email was not sent. Error message: "
                             + ex.getMessage());
                 }
+            }else{
+                context.getLogger().log("-----------------------Item with id "+request.getRecords().get(0).getSNS().getMessage()+" already exist-----------------------");
+                context.getLogger().log("Item with id "+request.getRecords().get(0).getSNS().getMessage()+" already exist");
             }
         }
         catch(AmazonServiceException ase){
