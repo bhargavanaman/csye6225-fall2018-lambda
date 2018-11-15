@@ -25,8 +25,9 @@ dependencies {
 task buildZip(type: Zip) {
     from compileJava
     from processResources
-    into('distributions') {
+    into('lib') {
         from configurations.runtime
     }
 }
+
 build.dependsOn buildZip
