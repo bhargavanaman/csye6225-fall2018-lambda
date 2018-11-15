@@ -9,6 +9,7 @@ __pycache__/
 
 .idea
 *.iml
+.gradle
 
 ### Java ###
 *.class
