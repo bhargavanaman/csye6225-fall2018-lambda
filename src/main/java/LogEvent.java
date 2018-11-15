@@ -23,6 +23,9 @@ public class LogEvent implements RequestHandler<SNSEvent, Object> {
 
     public Object handleRequest(SNSEvent request, Context context) {
 
+        context.getLogger().log("BUcket Name in ENV is  "+System.getenv("bucket.name"));
+        context.getLogger().log("BUcket Name in PROPERTY is "+System.getProperty("bucket.name"));
+
         String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss").format(Calendar.getInstance().getTime());
 
         context.getLogger().log("Invocation started: " + timeStamp);
