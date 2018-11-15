@@ -3,7 +3,7 @@ echo "Inside lambda.sh file "
 pwd
 ls -al
 MyLambda=$(aws lambda list-functions --region us-east-1 --query 'Functions[0].FunctionName' --output text)
-#aws lambda update-function-configuration --function-name $MyLambda --memory-size 200 --timeout 300
+#aws lambda update-function-configuration --function-name $MyLambda --memory-size 300 --timeout 300
 
 echo "Fetching domain name from Route 53"
 DOMAIN_NAME=$(aws route53 list-hosted-zones --query HostedZones[0].Name --output text)
