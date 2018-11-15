@@ -12,6 +12,7 @@ install: true
 
 script:
   - pwd
+  - gradle build
   - cd build/distributions/
   - ls -al
   - cd ../..
