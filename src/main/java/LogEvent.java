@@ -12,6 +12,7 @@ import com.amazonaws.services.lambda.runtime.events.SNSEvent;
 import com.amazonaws.services.simpleemail.AmazonSimpleEmailService;
 import com.amazonaws.services.simpleemail.AmazonSimpleEmailServiceClientBuilder;
 import com.amazonaws.services.simpleemail.model.*;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.text.SimpleDateFormat;
 import java.time.Instant;
@@ -21,10 +22,13 @@ public class LogEvent implements RequestHandler<SNSEvent, Object> {
     static DynamoDB dynamoDB;
     String domain = "csye6225-fall2018-chandwanid.me";
 
+    @Value("${bucket.name}")
+    private String bucketName;
+
     public Object handleRequest(SNSEvent request, Context context) {
 
-        context.getLogger().log("BUcket Name in ENV is  "+System.getenv("bucket.name"));
-        context.getLogger().log("BUcket Name in PROPERTY is "+System.getProperty("bucket.name"));
+        context.getLogger().log("BUcket Name in ENV is  "+bucketName);
+        //context.getLogger().log("BUcket Name in PROPERTY is "+System.getProperty("bucket.name"));
 
         String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss").format(Calendar.getInstance().getTime());
 
