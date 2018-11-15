@@ -15,7 +15,7 @@ script:
   - cd build/distributions/
   - ls -al
   - cd build/lib/
-  -ls -al
+  - ls -al
   - cd ../..
   - pwd
   - ls -al
