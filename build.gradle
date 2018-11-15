@@ -29,3 +29,4 @@ task buildZip(type: Zip) {
         from configurations.runtime
     }
 }
+build.dependsOn buildZip
