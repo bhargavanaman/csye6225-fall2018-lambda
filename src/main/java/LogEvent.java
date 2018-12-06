@@ -19,7 +19,7 @@ import java.util.Calendar;
 public class LogEvent implements RequestHandler<SNSEvent, Object> {
 
     static DynamoDB dynamoDB;
-    String domain = "csye6225-fall2018-bhargavan.me";
+    String domain = "web-app.csye6225-fall2018-bhargavan.me";
 
     public Object handleRequest(SNSEvent request, Context context) {
 
@@ -75,7 +75,7 @@ public class LogEvent implements RequestHandler<SNSEvent, Object> {
                                                                             .withCharset(
                                                                                     "UTF-8")
                                                                             .withData(
-                                                                                    "Please click on the below link to reset the password<br/>"+
+                                                                                    "Please click on the below link to reset pwd <br/>"+
                                                                                             "<p><a href='#'>https://"+domain+"/resetPwd?email="+TO+"&token="+token+"</a></p>"))
                                             )
                                             .withSubject(
